@@ -3479,7 +3479,7 @@ body {
     justify-content: center;
     width: 100%;
     height: 0%;
-    background: rgba(148, 193, 61, 0.8);
+    background: #faa039b0;
     -webkit-transition: .7s cubic-bezier(0.34, -0.13, 0.34, 1.1);
     -o-transition: .7s cubic-bezier(0.34, -0.13, 0.34, 1.1);
     transition: .7s cubic-bezier(0.34, -0.13, 0.34, 1.1);
@@ -3985,7 +3985,7 @@ body {
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
-    background-color: rgb(148, 193, 61);
+    background-color: #Faa039;
 }
 
 .mission-block .inner-box:hover .overlay-box {
@@ -4886,7 +4886,7 @@ body {
     -webkit-transform-origin: left bottom;
     -ms-transform-origin: left bottom;
     transform-origin: left bottom;
-    background-color: rgba(148, 193, 61, 0.85);
+    background-color: #FAA023;
 }
 
 .team-block .inner-box .image .overlay-box .social-icon-one {
@@ -5172,7 +5172,7 @@ body {
 }
 
 .news-block-one .overlay a:hover {
-    background: rgba(255, 255, 255, 1) none repeat scroll 0 0;
+    background: #FAA023 none repeat scroll 0 0;
     color: #FAA023;
 }
 
@@ -6291,6 +6291,7 @@ body {
 
 .instagram-widget li:hover .img-holder .overlay-style-one {
     opacity: 1;
+
 }
 
 .instagram-widget li .img-holder .overlay-style-one .content a {
