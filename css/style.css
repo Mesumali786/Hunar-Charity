@@ -2583,14 +2583,14 @@ body {
     .main-menu .navbar-collapse>.navigation>li>a:hover,
     .main-menu .navbar-collapse>.navigation>li>a:active,
     .main-menu .navbar-collapse>.navigation>li>a:focus {
-        /* background:#FAA023; */
+        background:#FAA023;
     }
     .main-menu .navbar-collapse>.navigation>li:hover>a,
     .main-menu .navbar-collapse>.navigation>li>ul>li:hover>a,
     .main-menu .navbar-collapse>.navigation>li>ul>li>ul>li:hover>a,
     .main-menu .navbar-collapse>.navigation>li.current>a,
     .main-menu .navbar-collapse>.navigation>li.current-menu-item>a {
-        /* background:#FAA023; */
+        background:#FAA023;
         color: #ffffff !important;
     }
     .main-menu .navbar-collapse>.navigation li.dropdown .dropdown-btn {
