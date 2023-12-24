@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>HUNAR KA SAFAR | Home</title>
+    <title>HUNAR KA SAFAR | About</title>
 
     <!-- Stylesheets -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -40,149 +40,154 @@
     <!-- Responsive -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: url("../img/1.avif") no-repeat center / cover;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        nav {
+            position: sticky;
+            top: 0;
+            background: white;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        nav ul {
+             width: 100%;
+             list-style: none;
+             display: flex;
+             justify-content: flex-end;
+             align-items: center;
+        }
+        nav ul li {
+            height: 100px;
+        }
+        nav ul li a {
+            font-size: 19px;
+            font-weight: 600;
+            height: 100%;
+            padding: 0px 15px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            color: black;
+        }
+        nav ul li a:hover {
+            /* background: #f0f0f0; */
+            color: #E48B10;
+            transition: .6s ease;
+        }
+        nav li:first-child {
+            margin-right: auto;
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: 250px;
+            z-index: 999;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            backdrop-filter: blur(10px);
+        }
+        .sidebar li {
+            width: 100%;
+            height: 60px;
+        }
+        .sidebar li a {
+            width: 100%;
+            padding: 0px 20px;
+            margin: 0;
+        }
+        .sidebar li img {
+            margin-top: -10px;
+            margin-left: 20px;
+        }
+        @media(max-width: 878px) {
+            .hideOnMobile {
+                display: none;
+            }
+        }
+        @media(min-width: 878px) {
+            .hideOnTab {
+                display: none;
+            }
+        }
+    </style>
 </head>
-
 <body>
-    <div class="page-wrapper">
+    
+    <!-- Preloader -->
+    <div class="preloader"></div>
 
-        <!-- Preloader -->
-        <div class="preloader"></div>
+    <!-- main header -->
+    <header class="main-header">
 
-        <!-- main header -->
-        <header class="main-header">
-
-            <!-- header top -->
-            <div class="header-top">
-                <div class="container">
-                    <div class="outer-box">
-                        <!--Top Left-->
-                        <div class="top-left">
-                            <ul class="links-nav clearfix">
-                                <li><i class="fa fa-phone"></i>Call Us Now <strong>+92 333 1071742</strong></li>
-                                <li><i class="fa fa-envelope-open"></i>Send Us Email <strong></strong><a href="mailto:info@hunarkasafar.com"><strong>info@hunarkasafar.com</a></strong></li>
-                            </ul>
-                        </div>
-
-                        <!--Top Right-->
-                        <div class="top-right">
-                            <!-- <div class="link-btn"><a href="#" class="theme-btn login-btn"><span class="fa fa-sign-in-alt"></span>Donor Login</a></div> -->
-                            <div class="social-links clearfix">
-                                <a href=""><span class="fab fa-twitter"></span></a>
-                                <a href="https://www.facebook.com/profile.php?id=61553850647413&mibextid=ZbWKwL"><span class="fab fa-facebook"></span></a>
-                                <a href=""><span class="fab fa-youtube"></span></a>
-                                <a href=""><span class="fab fa-instagram"></span></a>
-                            </div>
-
-                        </div>
+        <!-- header top -->
+        <div class="header-top">
+            <div class="container">
+                <div class="outer-box">
+                    <!--Top Left-->
+                    <div class="top-left">
+                        <ul class="links-nav clearfix">
+                            <li><i class="fa fa-phone"></i>Call Us Now <strong>+92 333 1071742</strong></li>
+                            <li><i class="fa fa-envelope-open"></i>Send Us Email <strong></strong><a href="mailto:info@hunarkasafar.com"><strong>info@hunarkasafar.com</a></strong></li>
+                        </ul>
                     </div>
 
+                    <!--Top Right-->
+                    <div class="top-right">
+                        <!-- <div class="link-btn"><a href="#" class="theme-btn login-btn"><span class="fa fa-sign-in-alt"></span>Donor Login</a></div> -->
+                        <div class="social-links clearfix">
+                            <a href=""><span class="fab fa-twitter"></span></a>
+                            <a href="https://www.facebook.com/profile.php?id=61553850647413&mibextid=ZbWKwL"><span class="fab fa-facebook"></span></a>
+                            <a href=""><span class="fab fa-youtube"></span></a>
+                            <a href=""><span class="fab fa-instagram"></span></a>
+                        </div>
+
+                    </div>
                 </div>
+
             </div>
+        </div>
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar() class=""><a href="javaScript:;"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li class=""><img src="images/logo.png" alt=""></li>
 
-            <!--Header-Upper-->
-            <div class="header-upper">
-                <div class="container-fluid clearfix">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
 
-                    <div class="float-left logo-outer">
-                        <div class="logo"><a href="index.html"><img src="images/logo.png"alt="" title=""></a>
-                        </div>
-                    </div>
+            <li ><a href="#" style="padding: 15px 0; margin: 17px 0px; height: 47px; width: 100%;" class="theme-btn btn-style-one donate-box-btn">DONATE <i class="fa-sharp fa-solid fa-heart"></i></a></li>
+        </ul>
+        
+        <ul>
+            <li class=""><a href=""><img src="images/logo.png" alt="Hunar charity img"></a></li>
+            <li class="hideOnMobile"><a href="index.html">Home</a></li>
+            <li class="hideOnMobile"><a href="about.html">About</a></li>
+            <li class="hideOnMobile"><a href="gallery.html">Gallery</a></li>
+            <li class="hideOnMobile"><a href="project.html">Projects</a></li>
+            <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
 
-                    <div class="float-right upper-right clearfix">
+            <li class="hideOnMobile"><a href="#" style="padding: 15px 0; margin: 25px 20px; height: 47px; width: 180px;" class="theme-btn btn-style-one donate-box-btn">DONATE <i class="fa-sharp fa-solid fa-heart"></i></a></li>
 
-                        <div class="nav-outer clearfix">
-                            <!-- Main Menu -->
-                            <nav class="main-menu navbar-expand-lg">
-                                <div class="navbar-header">
-                                    <!-- Toggle Button -->
-                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                </button>
-                                </div>
-
-                                <div class="navbar-collapse collapse clearfix">
-                                    <ul class="navigation clearfix">
-                                       <li><a href="index.html">Home</a></li>
-                                        <li><a href="about.html">About</a></li>
-                                        <!-- <li><a href="School-addmission.html">Services</a></li> -->
-                                        <li><a href="project.html">Project</a></li>
-                                        <li><a href="Gallery.html">Gallery</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                    </ul>
-                                </div>
-                            </nav>
-
-                            <!-- Main Menu End-->
-
-                            <!-- Search box -->
-                            <div class="outer-box">
-                                <!--Search outer-->
-                                <!-- <div class="search-box-outer">
-                                    <div class="dropdown">
-                                        <button class="search-box-btn dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-search"></span></button>
-                                        <ul class="dropdown-menu pull-right search-panel" aria-labelledby="dropdownMenu3">
-                                            <li class="panel-outer">
-                                                <div class="form-container">
-                                                    <form method="post" action="blog.html">
-                                                        <div class="form-group">
-                                                            <input type="search" name="field-name" value="" placeholder="Search Here" required>
-                                                            <button type="submit" class="search-btn"><span class="fa fa-search"></span></button>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div> -->
-                                <div class="link-btn"><a href="#" class="theme-btn btn-style-one donate-box-btn">DONATE <i class="fa-sharp fa-solid fa-heart"></i></a></div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-            <!--End Header Upper-->
-
-            <!--Sticky Header-->
-            <div class="sticky-header">
-                <div class="container-fluid">
-                    <div class="clearfix">
-                        <!--Logo-->
-                        <div class="logo float-left">
-                            <a href="index.html" class="img-responsive"><img src="images/logo.png" alt="" title=""></a>
-                        </div>
-
-                        <!--Right Col-->
-                        <div class="right-col float-right">
-                            <!-- Main Menu -->
-                            <nav class="main-menu navbar-expand-lg">
-                                <div class="navbar-collapse collapse clearfix">
-                                    <ul class="navigation clearfix">
-                                        <li><a href="index.html">Home</a></li>
-                                         <li><a href="about.html">About</a></li>
-                                         <!-- <li><a href="School">Services</a></li> -->
-                                         <li><a href="projects.html">Project</a></li>
-                                         <li><a href="Gallery.html">Gallery</a></li>
-                                         <li><a href="contact.html">Contact</a></li>
-                                     </ul>
-                                     <div class="link-btn"><a href="#" class="theme-btn btn-style-one donate-box-btn">DONATE <i class="fa-sharp fa-solid fa-heart"></i></a></div>
-                                </div>
-                            </nav>
-                            
-                            <!-- Main Menu End-->
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-            <!--End Sticky Header-->
-        </header>
+            <li onclick=showSidebar() class="hideOnTab"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
 
     <!--Page title-->
     <section class="page-title" style="background-image:url(images/main-slider/image-1.jpg)">
@@ -206,12 +211,12 @@
             <div class="row">
                 
                 <!--Content Side / Blogs Classic-->
-                <div class="content-side col-lg-8">
+                <div class="content-side col-lg-12">
                     <!-- Blog single -->
                     <div class="blog-single">
                         <div class="inner-box">
                             <div class="image">
-                                <img src="images/main-slider/Donate-For-Palestine.jpg" alt="">
+                                <img src="images/main-slider/Donate-For-Palestine.jpg" height="500px" width="500px" alt="">
                             </div>
                             <div class="lower-box">
                                 <div class="top-content">
@@ -904,5 +909,14 @@
     <script src="js/script.js"></script>
 
 </body>
-
+<script>
+    function showSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = 'flex';
+    }
+    function hideSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = 'none';
+    }
+</script>
 </html>

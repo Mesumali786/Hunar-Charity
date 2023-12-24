@@ -53,8 +53,11 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         nav {
+            position: sticky;
+            top: 0;
             background: white;
             box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
         }
         nav ul {
              width: 100%;
@@ -164,7 +167,7 @@
     <nav>
         <ul class="sidebar">
             <li onclick=hideSidebar() class=""><a href="javaScript:;"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-            <li class=""><img src="images/logo.png" alt=""></li>
+            <li class=""><img src="images/logo.png" alt="Charity Image"></li>
 
             <li><a href="">Home</a></li>
             <li><a href="">About</a></li>
@@ -174,7 +177,7 @@
             <li class="link-btn"><a href="" style="padding: 15px 0; margin: 17px -14px; height: 47px; width: 100%;" class="theme-btn btn-style-one donate-box-btn">DONATE <i class="fa-sharp fa-solid fa-heart"></i></a></li>
         </ul>
         <ul>
-            <li class=""><a href=""><img src="images/logo.png" alt=""></a></li>
+            <li class=""><a href=""><img src="images/logo.png" alt="images hd"></a></li>
             <li class="hideOnMobile"><a href="">Home</a></li>
             <li class="hideOnMobile"><a href="">About</a></li>
             <li class="hideOnMobile"><a href="">Gallery</a></li>
@@ -220,200 +223,10 @@
         </div>
     </section>
 
-     <!-- Donate form -->
-     <section class="donate-form">
-        <div class="container">
-            <div class="outer-box">
-                <div class="row">
-                    <div class="col-lg-7">
-                        <div class="donate-content">
-                            <h1>Quick <span>Donate</span></h1>
-                            <h4>We provide support to many organizations</h4>
-                            <div class="text">Adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna ceniam quis nostrud exercitation ullamco laboris.</div>
-
-                            <!--Progress Levels-->
-                            <div class="progress-levels">
-
-                                <div class="donation clearfix">
-                                    <div class="text">Donations Target</div>
-                                    <div class="price">Pkr : 415,000</div>
-                                </div>
-                                <!--Skill Box-->
-                                <div class="progress-box wow fadeInRight" data-wow-delay="100ms" data-wow-duration="1500ms">
-                                    <div class="inner">
-                                        <div class="bar">
-                                            <div class="bar-innner">
-                                                <div class="bar-fill gray-bg" data-percent="100"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="donation clearfix">
-                                    <div class="text">Donations Achieved</div>
-                                    <div class="price">Pkr : 328,600</div>
-                                </div>
-                                <!--Skill Box-->
-                                <div class="progress-box wow fadeInRight" data-wow-delay="100ms" data-wow-duration="1500ms">
-                                    <div class="inner">
-                                        <div class="bar">
-                                            <div class="bar-innner">
-                                                <div class="bar-fill" data-percent="80"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-5">
-                        <div class="default-form-area">
-                            <form id="contact-form" name="contact_form" class="contact-form style-four" action="inc/sendmail.php" method="post">
-                                <div class="row clearfix">
-                                    <div class="col-md-12 column">
-                                        <div class="form-group">
-                                            <input type="text" name="form_name" class="form-control" value="" placeholder="Your Name" required="">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 column">
-                                        <div class="form-group">
-                                            <select name="form_select">
-                                        <option value="" selected>Feed Poor Families in Africa</option>
-                                        <option value="">Feed Poor Families in Uganda</option>
-                                        <option value="">Feed Poor Families in Tajikistan</option>
-                                        <option value="">Feed Poor Families in Uzbekistan</option>
-                                    </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 column">
-                                        <div class="form-group">
-                                            <select name="form_select">
-                                        <option value="" selected>Donation Amount Pkr</option>
-                                        <option value="">Pkr 0 to 50,000</option>
-                                        <option value="">Pkr 50,000 to 100,000</option>
-                                        <option value="">Pkr 100,000 to 10,00,000</option>
-                                    </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="contact-section-btn text-center">
-                                    <div class="form-group style-two">
-                                        <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="">
-                                        <button class="theme-btn btn-style-one w-100" type="submit" data-loading-text="Please wait...">Submit Now</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-     <!-- Welcome Section -->
-     <section class="welcome-section sp-two">
-        <div class="container">
-            <div class="row">
-                <!-- services block -->
-                <div class="services-block-one col-lg-3 col-md-6 col-sm-6">
-                    <div class="inner-box hvr-float-shadow">
-                        <div class="icon"><span class="flaticon-heart-box"></span></div>
-                        <h4><a href="#">Get Inspired</a></h4>
-                        <div class="text">Join 'Hunar ka Safar' in coloring the world with hope, as we provide hospital objects at half the cost for the brighter future of children.</div>
-                        <div class="read-more">
-                            <a href="#"><span class="flaticon-right-arrow"></span></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- services block -->
-                <div class="services-block-one col-lg-3 col-md-6 col-sm-6">
-                    <div class="inner-box hvr-float-shadow">
-                        <div class="icon"><span class="flaticon-button"></span></div>
-                        <h4><a href="#">Give Donation</a></h4>
-                        <div class="text">Join hands with 'Hunar ka Safar' in the noble cause of healing young hearts. Your donation paves the way for a healthier and happier future for children.</div>
-                        <div class="read-more">
-                            <a href="#"><span class="flaticon-right-arrow"></span></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- services block -->
-                <div class="services-block-one col-lg-3 col-md-6 col-sm-6">
-                    <div class="inner-box hvr-float-shadow">
-                        <div class="icon"><span class="flaticon-boy"></span></div>
-                        <h4><a href="#">Become a Volunteer</a></h4>
-                        <div class="text">Step into a world of compassion and purpose. Volunteer with 'Hunar ka Safar' and be the hands that shape a brighter future for children.</div>
-                        <div class="read-more">
-                            <a href="#"><span class="flaticon-right-arrow"></span></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- services block -->
-                <div class="services-block-one col-lg-3 col-md-6 col-sm-6">
-                    <div class="inner-box hvr-float-shadow">
-                        <div class="icon"><span class="flaticon-donation"></span></div>
-                        <h4><a href="#">Help The Children</a></h4>
-                        <div class="text">Join us in our mission to help children thrive. Your contribution ensures a brighter future filled with health, happiness, and endless possibilities.</div>
-                        <div class="read-more">
-                            <a href="#"><span class="flaticon-right-arrow"></span></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Donation Details -->
-        <!-- <div class="container">
-        <div class="sec-title style-two">
-            <h4>Muslim Welfare Centre</h4>
-            <h1><span>Donation</span></h1>
-        <hr>
-        </div>
-        <div class="about-block">
-            <div class="inner-box">
-                <div class="row">
-                <div class="col-md-6 text">
-                    <p>For donations please deposit funds via Inter Bank Funds Transfer IBFT/Cheque into Muslim Welfare Centre:</p>
-                    <ul>
-                        <li style="list-style: disc;"><h4>Bank Name : Meezan Bank Limited</h4></li>
-                        <li style="list-style: disc;"><h4>Account Title :  MUSLIM WELFARE CENTRE</h4></li>
-                        <li style="list-style: disc;"><h4>Account Number : 01310100324729</h4></li>
-                        <li style="list-style: disc;"><h4>Branch : North Nazimabad – Karachi (0131)</h4></li>
-                        <li style="list-style: disc;"><h4>IBAN Number : PK73 MEZN 0001 3101 0032 4729</h4></li>
-                    </ul>
-                    <p>Please provide this information so that we can process your donation quickly:</p>
-                    <ul>
-                        <li style="list-style: disc;">Your Full Name</li>
-                        <li style="list-style: disc;">Payment Amountt</li>
-                        <li style="list-style: disc;">Payment reference no.</h4></li>
-                        <li style="list-style: disc;">Date of deposit</li>
-                    </ul>
-                </div>
-                <div class="col-md-6 text">
-                    <p>You will receive an e-mail confirming the successful completion of your donation.</p>
-                    <h4>Tax</h4>
-                    <p>ALL DONATIONS ARE TAX DEDUCTIBLE (REGISTERED CHARITY# – KAR 080-2003) Muslim Welfare Pakistan will issue Tax Deductible Receipt for Income Tax purposes for all donations.</p>
-                    <h4>Refund / Exchange Policy</h4>
-                    <p>As with most donation sites, we do not offer refunds on donations submitted through our websites. If a transaction was processed in error, please contact our office to discuss the situation with our staff.</p>
-                </div>
-            </div>
-                <div class="author">
-                    <div class="inner-box">
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div> -->
-
-
-
-
     </div>
     <!--End pagewrapper-->
 
-
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat doloremque, aliquid unde voluptas modi quam dicta hic qui ut tenetur adipisci, cupiditate eveniet ea ratione! Nihil tenetur eius vel amet Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos delectus at molestiae laborum sed consequatur error rem voluptatum, cupiditate quis sapiente porro labore repellendus blanditiis, veritatis exercitationem eveniet iure odit. elit. Fugiat doloremque, aliquid unde voluptas modi quam dicta hic qui ut tenetur adipisci, cupiditate eveniet ea ratione! Nihil tenetur eius vel amet Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos delectus at molestiae laborum sed consequatur error rem voluptatum, cupiditate quis sapiente porro labore repellendus blanditiis, veritatis exercitationem eveniet iure odit.elit. Fugiat doloremque, aliquid unde voluptas modi quam dicta hic qui ut tenetur adipisci, cupiditate eveniet ea ratione! Nihil tenetur eius vel amet Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos delectus at molestiae laborum sed consequatur error rem voluptatum, cupiditate quis sapiente porro labore repellendus blanditiis, veritatis exercitationem eveniet iure odit.elit. Fugiat doloremque, aliquid unde voluptas modi quam dicta hic qui ut tenetur adipisci, cupiditate eveniet ea ratione! Nihil tenetur eius vel amet Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos delectus at molestiae laborum sed consequatur error rem voluptatum, cupiditate quis sapiente porro labore repellendus blanditiis, veritatis exercitationem eveniet iure odit.elit. Fugiat doloremque, aliquid unde voluptas modi quam dicta hic qui ut tenetur adipisci, cupiditate eveniet ea ratione! Nihil tenetur eius vel amet Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos delectus at molestiae laborum sed consequatur error rem voluptatum, cupiditate quis sapiente porro labore repellendus blanditiis, veritatis exercitationem eveniet iure odit.elit. Fugiat doloremque, aliquid unde voluptas modi quam dicta hic qui ut tenetur adipisci, cupiditate eveniet ea ratione! Nihil tenetur eius vel amet Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos delectus at molestiae laborum sed consequatur error rem voluptatum, cupiditate quis sapiente porro labore repellendus blanditiis, veritatis exercitationem eveniet iure odit.elit. Fugiat doloremque, aliquid unde voluptas modi quam dicta hic qui ut tenetur adipisci, cupiditate eveniet ea ratione! Nihil tenetur eius vel amet Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos delectus at molestiae laborum sed consequatur error rem voluptatum, cupiditate quis sapiente porro labore repellendus blanditiis, veritatis exercitationem eveniet iure odit.elit. Fugiat doloremque, aliquid unde voluptas modi quam dicta hic qui ut tenetur adipisci, cupiditate eveniet ea ratione! Nihil tenetur eius vel amet Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos delectus at molestiae laborum sed consequatur error rem voluptatum, cupiditate quis sapiente porro labore repellendus blanditiis, veritatis exercitationem eveniet iure odit.elit. Fugiat doloremque, aliquid unde voluptas modi quam dicta hic qui ut tenetur adipisci, cupiditate eveniet ea ratione! Nihil tenetur eius vel amet Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos delectus at molestiae laborum sed consequatur error rem voluptatum, cupiditate quis sapiente porro labore repellendus blanditiis, veritatis exercitationem eveniet iure odit.elit. Fugiat doloremque, aliquid unde voluptas modi quam dicta hic qui ut tenetur adipisci, cupiditate eveniet ea ratione! Nihil tenetur eius vel amet Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos delectus at molestiae laborum sed consequatur error rem voluptatum, cupiditate quis sapiente porro labore repellendus blanditiis, veritatis exercitationem eveniet iure odit.elit. Fugiat doloremque, aliquid unde voluptas modi quam dicta hic qui ut tenetur adipisci, cupiditate eveniet ea ratione! Nihil tenetur eius vel amet Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos delectus at molestiae laborum sed consequatur error rem voluptatum, cupiditate quis sapiente porro labore repellendus blanditiis, veritatis exercitationem eveniet iure odit.</p>
 
     <!-- Scroll Top Button -->
     <button class="scroll-top scroll-to-target" data-target="html">
