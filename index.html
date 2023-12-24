@@ -40,328 +40,330 @@
     <!-- Responsive -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: url("../img/1.avif") no-repeat center / cover;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        nav {
+            background: white;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+             width: 100%;
+             list-style: none;
+             display: flex;
+             justify-content: flex-end;
+             align-items: center;
+        }
+        nav ul li {
+            height: 100px;
+        }
+        nav ul li a {
+            font-size: 19px;
+            font-weight: 600;
+            height: 100%;
+            padding: 0px 15px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            color: black;
+        }
+        nav ul li a:hover {
+            /* background: #f0f0f0; */
+            color: #E48B10;
+            transition: .6s ease;
+        }
+        nav li:first-child {
+            margin-right: auto;
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: 250px;
+            z-index: 999;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            backdrop-filter: blur(10px);
+        }
+        .sidebar li {
+            width: 100%;
+            height: 60px;
+        }
+        .sidebar li a {
+            width: 100%;
+            padding: 0px 20px;
+            margin: 0;
+        }
+        .sidebar li img {
+            margin-top: -10px;
+            margin-left: 20px;
+        }
+        @media(max-width: 800px) {
+            .hideOnMobile {
+                display: none;
+            }
+        }
+        @media(min-width: 800px) {
+            .hideOnTab {
+                display: none;
+            }
+        }
+    </style>
 </head>
-
 <body>
-    <div class="page-wrapper">
+    
+    <!-- Preloader -->
+    <div class="preloader"></div>
 
-        <!-- Preloader -->
-        <div class="preloader"></div>
+    <!-- main header -->
+    <header class="main-header">
 
-        <!-- main header -->
-        <header class="main-header">
-
-            <!-- header top -->
-            <div class="header-top">
-                <div class="container">
-                    <div class="outer-box">
-                        <!--Top Left-->
-                        <div class="top-left">
-                            <ul class="links-nav clearfix">
-                                <li><i class="fa fa-phone"></i>Call Us Now <strong>+92 333 1071742</strong></li>
-                                <li><i class="fa fa-envelope-open"></i>Send Us Email <strong></strong><a href="mailto:info@hunarkasafar.com"><strong>info@hunarkasafar.com</a></strong></li>
-                            </ul>
-                        </div>
-
-                        <!--Top Right-->
-                        <div class="top-right">
-                            <!-- <div class="link-btn"><a href="#" class="theme-btn login-btn"><span class="fa fa-sign-in-alt"></span>Donor Login</a></div> -->
-                            <div class="social-links clearfix">
-                                <a href=""><span class="fab fa-twitter"></span></a>
-                                <a href="https://www.facebook.com/profile.php?id=61553850647413&mibextid=ZbWKwL"><span class="fab fa-facebook"></span></a>
-                                <a href=""><span class="fab fa-youtube"></span></a>
-                                <a href=""><span class="fab fa-instagram"></span></a>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!--Header-Upper-->
-            <div class="header-upper">
-                <div class="container-fluid clearfix">
-
-                    <div class="float-left logo-outer">
-                        <div class="logo"><a href="index.html"><img src="images/logo.png"alt="" title=""></a>
-                        </div>
-                    </div>
-
-                    <div class="float-right upper-right clearfix">
-
-                        <div class="navbar-outer clearfix">
-                            <!-- Main Menu -->
-                            <nav class="main-menu navbar-expand-lg fixed-top">
-                                <div class="navbar-header">
-                                    <!-- Toggle Button -->
-                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                </button>
-                                </div>
-
-                                <div class="navbar-collapse collapse clearfix" >
-                                    <ul class="navigation clearfix">
-                                       <li><a href="index.html" class="active">Home</a></li>
-                                        <li><a href="about.html">About</a></li>
-                                        <!-- <li><a href="School-addmission.html">Services</a></li> -->
-                                        <li><a href="project.html">Project</a></li>
-                                        <li><a href="Gallery.html">Gallery</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                    </ul>
-                                </div>
-                            </nav>
-
-                            <!-- Main Menu End-->
-
-                            <!-- Search box -->
-                            <div class="outer-box">
-                                <!--Search outer-->
-                                <!-- <div class="search-box-outer">
-                                    <div class="dropdown">
-                                        <button class="search-box-btn dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-search"></span></button>
-                                        <ul class="dropdown-menu pull-right search-panel" aria-labelledby="dropdownMenu3">
-                                            <li class="panel-outer">
-                                                <div class="form-container">
-                                                    <form method="post" action="blog.html">
-                                                        <div class="form-group">
-                                                            <input type="search" name="field-name" value="" placeholder="Search Here" required>
-                                                            <button type="submit" class="search-btn"><span class="fa fa-search"></span></button>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div> -->
-                                <div class="link-btn"><a href="#" class="theme-btn btn-style-one donate-box-btn">DONATE <i class="fa-sharp fa-solid fa-heart"></i></a></div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-            <!--End Header Upper-->
-
-            <!--Sticky Header-->
-            <div class="sticky-header">
-                <div class="container-fluid">
-                    <div class="clearfix">
-                        <!--Logo-->
-                        <div class="logo float-left">
-                            <a href="index.html" class="img-responsive"><img src="images/logo.png" alt="" title=""></a>
-                        </div>
-
-                        <!--Right Col-->
-                        <div class="right-col float-right">
-                            <!-- Main Menu -->
-                            <nav class="main-menu navbar-expand-lg">
-                                <div class="navbar-collapse collapse clearfix">
-                                    <ul class="navigation clearfix">
-                                        <li><a href="index.html">Home</a></li>
-                                         <li><a href="about.html">About</a></li>
-                                         <!-- <li><a href="School">Services</a></li> -->
-                                         <li><a href="projects.html">Project</a></li>
-                                         <li><a href="Gallery.html">Gallery</a></li>
-                                         <li><a href="contact.html">Contact</a></li>
-                                     </ul>
-                                     <div class="link-btn"><a href="#" class="theme-btn btn-style-one donate-box-btn">DONATE <i class="fa-sharp fa-solid fa-heart"></i></a></div>
-                                </div>
-                            </nav>
-                            
-                            <!-- Main Menu End-->
-                            <!-- </div> -->
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-            <!--End Sticky Header-->
-        </header>
-
-        <!-- Main slider -->
-        <section class="main-slider">
-            <div class="container-fluid">
-                <ul class="main-slider-carousel owl-carousel owl-theme slide-nav">
-                    <li class="slider-wrapper">
-                        <div class="image"><img src="images/main-slider/image-3.jpg" alt=""></div>
-                        <div class="slider-caption light text-center">
-                            <div class="container">
-                                <h1><span class="border-shape">PALESTINE</span></h1>
-                                <h2><span  style="color: Yellow; background-color: black;  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">NEED OUR SUPPORT</span></h3>
-                                <div class=" large-text"><h2 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: white; font-weight: 700;">LET'S JOIN HANDS</h2></div>
-                                <div class="link-btn"><a href="#" class="theme-btn btn-style-nine">Donate</a></div>
-                            </div>
-                        </div>
-                        <div class="slide-overlay"></div>
-                    </li>
-                    <!-- <li class="slider-wrapper">
-                        <div class="image"><img src="images/main-slider/image-2.jpg" alt=""></div>
-                        <div class="slider-caption light text-center">
-                            <div class="container">
-                                <h3>change the life, change the world <span class="border-shape"></span></h3>
-                                <h1>sponsor an orphan and <br>feed the poor people</h1>
-                                <h3 style="color: #FAA023; font-size: 3.4rem;">Hunar Ka Safar<br><span></span></h3>
-                                <div class="text light large-text">With Warmth & True Support</div>
-                                <div class="link-btn"><a href="#" class="theme-btn btn-style-two">Learn More</a></div>
-                            </div>
-                        </div>
-                        <div class="slide-overlay"></div>
-                    </li> -->
-                </ul>
-            </div>
-        </section>
-
-         <!-- Donate form -->
-         <section class="donate-form">
+        <!-- header top -->
+        <div class="header-top">
             <div class="container">
                 <div class="outer-box">
-                    <div class="row">
-                        <div class="col-lg-7">
-                            <div class="donate-content">
-                                <h1>Quick <span>Donate</span></h1>
-                                <h4>We provide support to many organizations</h4>
-                                <div class="text">Adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna ceniam quis nostrud exercitation ullamco laboris.</div>
+                    <!--Top Left-->
+                    <div class="top-left">
+                        <ul class="links-nav clearfix">
+                            <li><i class="fa fa-phone"></i>Call Us Now <strong>+92 333 1071742</strong></li>
+                            <li><i class="fa fa-envelope-open"></i>Send Us Email <strong></strong><a href="mailto:info@hunarkasafar.com"><strong>info@hunarkasafar.com</a></strong></li>
+                        </ul>
+                    </div>
 
-                                <!--Progress Levels-->
-                                <div class="progress-levels">
-
-                                    <div class="donation clearfix">
-                                        <div class="text">Donations Target</div>
-                                        <div class="price">Pkr : 415,000</div>
-                                    </div>
-                                    <!--Skill Box-->
-                                    <div class="progress-box wow fadeInRight" data-wow-delay="100ms" data-wow-duration="1500ms">
-                                        <div class="inner">
-                                            <div class="bar">
-                                                <div class="bar-innner">
-                                                    <div class="bar-fill gray-bg" data-percent="100"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="donation clearfix">
-                                        <div class="text">Donations Achieved</div>
-                                        <div class="price">Pkr : 328,600</div>
-                                    </div>
-                                    <!--Skill Box-->
-                                    <div class="progress-box wow fadeInRight" data-wow-delay="100ms" data-wow-duration="1500ms">
-                                        <div class="inner">
-                                            <div class="bar">
-                                                <div class="bar-innner">
-                                                    <div class="bar-fill" data-percent="80"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                </div>
-                            </div>
+                    <!--Top Right-->
+                    <div class="top-right">
+                        <!-- <div class="link-btn"><a href="#" class="theme-btn login-btn"><span class="fa fa-sign-in-alt"></span>Donor Login</a></div> -->
+                        <div class="social-links clearfix">
+                            <a href=""><span class="fab fa-twitter"></span></a>
+                            <a href="https://www.facebook.com/profile.php?id=61553850647413&mibextid=ZbWKwL"><span class="fab fa-facebook"></span></a>
+                            <a href=""><span class="fab fa-youtube"></span></a>
+                            <a href=""><span class="fab fa-instagram"></span></a>
                         </div>
-                        <div class="col-lg-5">
-                            <div class="default-form-area">
-                                <form id="contact-form" name="contact_form" class="contact-form style-four" action="inc/sendmail.php" method="post">
-                                    <div class="row clearfix">
-                                        <div class="col-md-12 column">
-                                            <div class="form-group">
-                                                <input type="text" name="form_name" class="form-control" value="" placeholder="Your Name" required="">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12 column">
-                                            <div class="form-group">
-                                                <select name="form_select">
-                                            <option value="" selected>Feed Poor Families in Africa</option>
-                                            <option value="">Feed Poor Families in Uganda</option>
-                                            <option value="">Feed Poor Families in Tajikistan</option>
-                                            <option value="">Feed Poor Families in Uzbekistan</option>
-                                        </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12 column">
-                                            <div class="form-group">
-                                                <select name="form_select">
-                                            <option value="" selected>Donation Amount Pkr</option>
-                                            <option value="">Pkr 0 to 50,000</option>
-                                            <option value="">Pkr 50,000 to 100,000</option>
-                                            <option value="">Pkr 100,000 to 10,00,000</option>
-                                        </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="contact-section-btn text-center">
-                                        <div class="form-group style-two">
-                                            <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="">
-                                            <button class="theme-btn btn-style-one w-100" type="submit" data-loading-text="Please wait...">Submit Now</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Welcome Section -->
-        <section class="welcome-section sp-two">
-            <div class="container">
+            </div>
+        </div>
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar() class=""><a href="javaScript:;"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li class=""><img src="images/logo.png" alt=""></li>
+
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Gallery</a></li>
+            <li><a href="">Projects</a></li>
+            <li><a href="">Contact</a></li>
+            <li class="link-btn"><a href="" style="padding: 15px 0; margin: 17px -14px; height: 47px; width: 100%;" class="theme-btn btn-style-one donate-box-btn">DONATE <i class="fa-sharp fa-solid fa-heart"></i></a></li>
+        </ul>
+        <ul>
+            <li class=""><a href=""><img src="images/logo.png" alt=""></a></li>
+            <li class="hideOnMobile"><a href="">Home</a></li>
+            <li class="hideOnMobile"><a href="">About</a></li>
+            <li class="hideOnMobile"><a href="">Gallery</a></li>
+            <li class="hideOnMobile"><a href="">Projects</a></li>
+            <li class="hideOnMobile"><a href="">Contact</a></li>
+            <!-- <li class="link-btn hideOnMobile"><a href="" style="padding: 15px 0; margin: 25px 20px; height: 47px; width: 180px;" class="theme-btn btn-style-one donate-box-btn">DONATE <i class="fa-sharp fa-solid fa-heart"></i></a></li> -->
+
+            <li onclick=showSidebar() class="hideOnTab"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+    
+
+    <!-- Main slider -->
+    <section class="main-slider">
+        <div class="container-fluid">
+            <ul class="main-slider-carousel owl-carousel owl-theme slide-nav">
+                <li class="slider-wrapper">
+                    <div class="image"><img src="images/main-slider/image-3.jpg" alt=""></div>
+                    <div class="slider-caption light text-center">
+                        <div class="container">
+                            <h1><span class="border-shape">PALESTINE</span></h1>
+                            <h2><span  style="color: Yellow; background-color: black;  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">NEED OUR SUPPORT</span></h3>
+                            <div class=" large-text"><h2 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: white; font-weight: 700;">LET'S JOIN HANDS</h2></div>
+                            <div class="link-btn"><a href="#" class="theme-btn btn-style-nine">Donate</a></div>
+                        </div>
+                    </div>
+                    <div class="slide-overlay"></div>
+                </li>
+                <!-- <li class="slider-wrapper">
+                    <div class="image"><img src="images/main-slider/image-2.jpg" alt=""></div>
+                    <div class="slider-caption light text-center">
+                        <div class="container">
+                            <h3>change the life, change the world <span class="border-shape"></span></h3>
+                            <h1>sponsor an orphan and <br>feed the poor people</h1>
+                            <h3 style="color: #FAA023; font-size: 3.4rem;">Hunar Ka Safar<br><span></span></h3>
+                            <div class="text light large-text">With Warmth & True Support</div>
+                            <div class="link-btn"><a href="#" class="theme-btn btn-style-two">Learn More</a></div>
+                        </div>
+                    </div>
+                    <div class="slide-overlay"></div>
+                </li> -->
+            </ul>
+        </div>
+    </section>
+
+     <!-- Donate form -->
+     <section class="donate-form">
+        <div class="container">
+            <div class="outer-box">
                 <div class="row">
-                    <!-- services block -->
-                    <div class="services-block-one col-lg-3 col-md-6 col-sm-6">
-                        <div class="inner-box hvr-float-shadow">
-                            <div class="icon"><span class="flaticon-heart-box"></span></div>
-                            <h4><a href="#">Get Inspired</a></h4>
-                            <div class="text">Join 'Hunar ka Safar' in coloring the world with hope, as we provide hospital objects at half the cost for the brighter future of children.</div>
-                            <div class="read-more">
-                                <a href="#"><span class="flaticon-right-arrow"></span></a>
+                    <div class="col-lg-7">
+                        <div class="donate-content">
+                            <h1>Quick <span>Donate</span></h1>
+                            <h4>We provide support to many organizations</h4>
+                            <div class="text">Adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna ceniam quis nostrud exercitation ullamco laboris.</div>
+
+                            <!--Progress Levels-->
+                            <div class="progress-levels">
+
+                                <div class="donation clearfix">
+                                    <div class="text">Donations Target</div>
+                                    <div class="price">Pkr : 415,000</div>
+                                </div>
+                                <!--Skill Box-->
+                                <div class="progress-box wow fadeInRight" data-wow-delay="100ms" data-wow-duration="1500ms">
+                                    <div class="inner">
+                                        <div class="bar">
+                                            <div class="bar-innner">
+                                                <div class="bar-fill gray-bg" data-percent="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="donation clearfix">
+                                    <div class="text">Donations Achieved</div>
+                                    <div class="price">Pkr : 328,600</div>
+                                </div>
+                                <!--Skill Box-->
+                                <div class="progress-box wow fadeInRight" data-wow-delay="100ms" data-wow-duration="1500ms">
+                                    <div class="inner">
+                                        <div class="bar">
+                                            <div class="bar-innner">
+                                                <div class="bar-fill" data-percent="80"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
                             </div>
                         </div>
                     </div>
-                    <!-- services block -->
-                    <div class="services-block-one col-lg-3 col-md-6 col-sm-6">
-                        <div class="inner-box hvr-float-shadow">
-                            <div class="icon"><span class="flaticon-button"></span></div>
-                            <h4><a href="#">Give Donation</a></h4>
-                            <div class="text">Join hands with 'Hunar ka Safar' in the noble cause of healing young hearts. Your donation paves the way for a healthier and happier future for children.</div>
-                            <div class="read-more">
-                                <a href="#"><span class="flaticon-right-arrow"></span></a>
-                            </div>
+                    <div class="col-lg-5">
+                        <div class="default-form-area">
+                            <form id="contact-form" name="contact_form" class="contact-form style-four" action="inc/sendmail.php" method="post">
+                                <div class="row clearfix">
+                                    <div class="col-md-12 column">
+                                        <div class="form-group">
+                                            <input type="text" name="form_name" class="form-control" value="" placeholder="Your Name" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 column">
+                                        <div class="form-group">
+                                            <select name="form_select">
+                                        <option value="" selected>Feed Poor Families in Africa</option>
+                                        <option value="">Feed Poor Families in Uganda</option>
+                                        <option value="">Feed Poor Families in Tajikistan</option>
+                                        <option value="">Feed Poor Families in Uzbekistan</option>
+                                    </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 column">
+                                        <div class="form-group">
+                                            <select name="form_select">
+                                        <option value="" selected>Donation Amount Pkr</option>
+                                        <option value="">Pkr 0 to 50,000</option>
+                                        <option value="">Pkr 50,000 to 100,000</option>
+                                        <option value="">Pkr 100,000 to 10,00,000</option>
+                                    </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact-section-btn text-center">
+                                    <div class="form-group style-two">
+                                        <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="">
+                                        <button class="theme-btn btn-style-one w-100" type="submit" data-loading-text="Please wait...">Submit Now</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                    <!-- services block -->
-                    <div class="services-block-one col-lg-3 col-md-6 col-sm-6">
-                        <div class="inner-box hvr-float-shadow">
-                            <div class="icon"><span class="flaticon-boy"></span></div>
-                            <h4><a href="#">Become a Volunteer</a></h4>
-                            <div class="text">Step into a world of compassion and purpose. Volunteer with 'Hunar ka Safar' and be the hands that shape a brighter future for children.</div>
-                            <div class="read-more">
-                                <a href="#"><span class="flaticon-right-arrow"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- services block -->
-                    <div class="services-block-one col-lg-3 col-md-6 col-sm-6">
-                        <div class="inner-box hvr-float-shadow">
-                            <div class="icon"><span class="flaticon-donation"></span></div>
-                            <h4><a href="#">Help The Children</a></h4>
-                            <div class="text">Join us in our mission to help children thrive. Your contribution ensures a brighter future filled with health, happiness, and endless possibilities.</div>
-                            <div class="read-more">
-                                <a href="#"><span class="flaticon-right-arrow"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end -->
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Donation Details -->
+     <!-- Welcome Section -->
+     <section class="welcome-section sp-two">
+        <div class="container">
+            <div class="row">
+                <!-- services block -->
+                <div class="services-block-one col-lg-3 col-md-6 col-sm-6">
+                    <div class="inner-box hvr-float-shadow">
+                        <div class="icon"><span class="flaticon-heart-box"></span></div>
+                        <h4><a href="#">Get Inspired</a></h4>
+                        <div class="text">Join 'Hunar ka Safar' in coloring the world with hope, as we provide hospital objects at half the cost for the brighter future of children.</div>
+                        <div class="read-more">
+                            <a href="#"><span class="flaticon-right-arrow"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- services block -->
+                <div class="services-block-one col-lg-3 col-md-6 col-sm-6">
+                    <div class="inner-box hvr-float-shadow">
+                        <div class="icon"><span class="flaticon-button"></span></div>
+                        <h4><a href="#">Give Donation</a></h4>
+                        <div class="text">Join hands with 'Hunar ka Safar' in the noble cause of healing young hearts. Your donation paves the way for a healthier and happier future for children.</div>
+                        <div class="read-more">
+                            <a href="#"><span class="flaticon-right-arrow"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- services block -->
+                <div class="services-block-one col-lg-3 col-md-6 col-sm-6">
+                    <div class="inner-box hvr-float-shadow">
+                        <div class="icon"><span class="flaticon-boy"></span></div>
+                        <h4><a href="#">Become a Volunteer</a></h4>
+                        <div class="text">Step into a world of compassion and purpose. Volunteer with 'Hunar ka Safar' and be the hands that shape a brighter future for children.</div>
+                        <div class="read-more">
+                            <a href="#"><span class="flaticon-right-arrow"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- services block -->
+                <div class="services-block-one col-lg-3 col-md-6 col-sm-6">
+                    <div class="inner-box hvr-float-shadow">
+                        <div class="icon"><span class="flaticon-donation"></span></div>
+                        <h4><a href="#">Help The Children</a></h4>
+                        <div class="text">Join us in our mission to help children thrive. Your contribution ensures a brighter future filled with health, happiness, and endless possibilities.</div>
+                        <div class="read-more">
+                            <a href="#"><span class="flaticon-right-arrow"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- end -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Details -->
         <!-- <div class="container">
         <div class="sec-title style-two">
             <h4>Muslim Welfare Centre</h4>
@@ -404,12 +406,13 @@
         </div>
         </div> -->
 
+
         <!-- About Us -->
         <section class="about-us">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5 image-block-one">
-                        <div class="image big-image"><img src="images/resource/about.jpg" alt="" ></div>
+                        <div class="image "><img src="images/resource/about.jpg" height="500px" alt="" ></div>
                         <div class="image small-image"><img src="images/resource/about-small.jpg" alt=""></div>
                     </div>
                     <div class="col-lg-6 offset-lg-1">
@@ -440,9 +443,11 @@
                     </div>
                 </div>
             </div>
+            
 
         </section>
 
+        
         <!-- Causes Section -->
         <section class="causes-section sp-two">
             <div class="container">
@@ -1420,137 +1425,12 @@
     </div>
     <!--End pagewrapper-->
 
-    <div id="donate-popup" class="donate-popup">
-        <div class="close-donate theme-btn"><span class="flaticon-cross"></span></div>
-        <div class="popup-inner">
 
-
-            <div class="container">
-                <div class="donate-form-area">
-                    <div class="section-title center">
-                        <h2>Donation Information</h2>
-                    </div>
-
-                    <h4>How much would you like to donate:</h4>
-
-                    <form action="#" class="donate-form default-form">
-                        <ul class="chicklet-list clearfix">
-                            <li>
-                                <input type="radio" id="donate-amount-1" name="donate-amount" />
-                                <label for="donate-amount-1" data-amount="1000">Pkr : 1000</label>
-                            </li>
-                            <li>
-                                <input type="radio" id="donate-amount-2" name="donate-amount" checked="checked" />
-                                <label for="donate-amount-2" data-amount="2000">Pkr : 2000</label>
-                            </li>
-                            <li>
-                                <input type="radio" id="donate-amount-3" name="donate-amount" />
-                                <label for="donate-amount-3" data-amount="3000">Pkr : 3000</label>
-                            </li>
-                            <li>
-                                <input type="radio" id="donate-amount-4" name="donate-amount" />
-                                <label for="donate-amount-4" data-amount="4000">Pkr : 4000</label>
-                            </li>
-                            <li>
-                                <input type="radio" id="donate-amount-5" name="donate-amount" />
-                                <label for="donate-amount-5" data-amount="5000">Pkr : 5000</label>
-                            </li>
-                            <li class="other-amount">
-
-                                <div class="input-container" data-message="Every dollar you donate helps end hunger.">
-                                    <span>Or</span><input type="text" id="other-amount" placeholder="Other Amount" />
-                                </div>
-                            </li>
-                        </ul>
-
-                        <h3>Donor Information</h3>
-
-                        <div class="form-bg">
-                            <div class="row clearfix">
-                                <div class="col-md-6 col-sm-6 col-xs-12">
-
-                                    <div class="form-group">
-                                        <p>Your Name*</p>
-                                        <input type="text" name="fname" placeholder="">
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <div class="form-group">
-                                        <p>Email*</p>
-                                        <input type="text" name="fname" placeholder="">
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <div class="form-group">
-                                        <p>Address*</p>
-                                        <input type="text" name="fname" placeholder="">
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <div class="form-group">
-                                        <p>Phn Num*</p>
-                                        <input type="text" name="fname" placeholder="">
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <!-- <ul class="payment-option">
-                            <li>
-                                <h4>Choose your payment method:</h4>
-                            </li>
-                            <li>
-                                <div class="checkbox">
-                                    <label>
-                                <input name="pay-us" type="checkbox">
-                                <span>Paypal</span>
-                            </label>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="checkbox">
-                                    <label>
-                                <input name="pay-us" type="checkbox">
-                                <span>Offline Donation</span>
-                            </label>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="checkbox">
-                                    <label>
-                                <input name="pay-us" type="checkbox">
-                                <span>Credit Card</span>
-                            </label>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="checkbox">
-                                    <label>
-                                <input name="pay-us" type="checkbox">
-                                <span>Debit Card</span>
-                            </label>
-                                </div>
-                            </li>
-                        </ul>
- -->
-                        <div class="center"><button class="theme-btn btn-style-one" type="submit">Donate Now</button></div>
-
-
-                    </form>
-                </div>
-            </div>
-
-
-
-        </div>
-    </div>
 
     <!-- Scroll Top Button -->
     <button class="scroll-top scroll-to-target" data-target="html">
-    <span class="fa fa-angle-up"></span>
-</button>
-
+        <span class="fa fa-angle-up"></span>
+    </button>    
 
     <!-- jequery plugins -->
 
@@ -1569,5 +1449,16 @@
     <script src="js/script.js"></script>
 
 </body>
+
+<script>
+    function showSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = 'flex';
+    }
+    function hideSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = 'none';
+    }
+</script>
 
 </html>
