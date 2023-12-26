@@ -1595,4 +1595,18 @@
     }
 </script>
 
+
+<script>
+        // Check if the device is a mobile
+        if (/Mobi|Android/i.test(navigator.userAgent)) {
+            // Open the website in desktop mode by manipulating the user agent
+            const desktopUserAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3';
+            Object.defineProperty(navigator, 'userAgent', {
+                value: desktopUserAgent,
+                writable: false,
+                configurable: false,
+                enumerable: true
+            });
+        }
+    </script>
 </html>
