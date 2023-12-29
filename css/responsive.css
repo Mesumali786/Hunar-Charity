@@ -72,3 +72,47 @@
         margin-bottom: 30px;
     }
 }
+@media only screen and (max-width: 480px) {
+    .main-slider .slider-wrapper .image img {
+        width: 100%; min-height: 250px !important;
+    }
+    .main-slider h2 {
+        font-size: 23px;
+    }
+    .main-slider h1 {
+        font-size: 23px;
+        line-height: 5px;
+    }
+    .btn-style-nine {
+        left: -13px;
+        position: relative;
+        padding: 3px 27px;
+        line-height: 18px;
+        color: #FAA023;
+        text-align: center;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 700;
+        background: #f7f7f7;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        border: 2px solid #f7f7f7;
+        font-family: 'Poppins', sans-serif;
+    }
+    .main-slider {
+        height: 250px;
+    }
+    .donate-form .donate-content {
+        padding: 24px 10px;
+    }
+    .donate-form .donate-content h1 {
+        font-size: 23px;
+    }
+    .donate-form .default-form-area {
+        background: #f7f9f3;
+        padding: 0px 17px;
+    }
+    .donate-form .outer-box {
+        border-radius: 30px;
+    }
+}
